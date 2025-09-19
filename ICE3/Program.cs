@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.ComponentModel.Design;
+using System.Security.Cryptography;
 
 namespace ICE3
 {
@@ -22,7 +24,7 @@ namespace ICE3
             int Toughness = 0;
             int Resolve = 0;
             //Career Variables + Strings
-            var CharacterName = "Unkown";
+            string CharacterName = "Unkown";
             string Career = "Unknown";
             int CareerChoice = 0;
             bool HasChosenCareer = false;
@@ -39,15 +41,16 @@ namespace ICE3
             Console.Clear();
             //Select your Career
             Console.WriteLine(" Select a Number to go along with your Career");
-            Console.WriteLine("1 Army AGL 35, STR 40, VGR 35, PER 25, INT, 35 Wil 30)");
-            Console.WriteLine("2 Psion AGL 25, STR 25, VGR 40, PER 35, INT, 35 Wil 30)");
-            Console.WriteLine("3 Rouge AGL 30, STR 25, VGR 30, PER 20, INT, 25 Wil 30)");
-            Console.WriteLine("4 Telepath AGL 30, STR 25, VGR 25, PER 30, INT, 40 Wil 30)");
-            Console.WriteLine("5 Tinker AGL 25, STR 30, VGR 25, PER 30, INT, 30 Wil 25)");
-            Console.WriteLine("6 Assassain AGL 45, STR 25, VGR 25, PER 35, INT, 35 Wil 25)");
+            Console.WriteLine("1 Army AGL 35, STR 40, VGR 35, PER 25, INT, 35 Will 30)");
+            Console.WriteLine("2 Psion AGL 25, STR 25, VGR 40, PER 35, INT, 35 Will 30)");
+            Console.WriteLine("3 Rouge AGL 30, STR 25, VGR 30, PER 20, INT, 25 Will 30)");
+            Console.WriteLine("4 Telepath AGL 30, STR 25, VGR 25, PER 30, INT, 40 Will 30)");
+            Console.WriteLine("5 Tinker AGL 25, STR 30, VGR 25, PER 30, INT, 30 Will 25)");
+            Console.WriteLine("6 Assassain AGL 45, STR 25, VGR 25, PER 35, INT, 35 Will 25)");
             Console.WriteLine("7 Random");
             CareerChoice = Convert.ToInt32(Console.ReadLine());
-           //Choices and their stats
+
+            //Choices and their stats
             if (CareerChoice == 1)
             {
                 Career = "Army";
@@ -68,7 +71,7 @@ namespace ICE3
                 Perception = 35;
                 Intellect = 35;
                 Will = 30;
-                Console.WriteLine("ahh one with the Psycics");
+                Console.WriteLine("ahh one with the Psycics!");
             }
 
             else if (CareerChoice == 3)
@@ -80,7 +83,7 @@ namespace ICE3
                 Perception = 20;
                 Intellect = 35;
                 Will = 30;
-                Console.WriteLine("You don't listen to others well");
+                Console.WriteLine("You don't listen to others well do you?");
             }
             else if (CareerChoice == 4)
             {
@@ -91,7 +94,7 @@ namespace ICE3
                 Perception = 30;
                 Intellect = 40;
                 Will = 30;
-                Console.WriteLine("A mind reader you say");
+                Console.WriteLine("A mind reader you say I better stop thinking");
             }
             else if (CareerChoice == 5)
             {
@@ -102,9 +105,9 @@ namespace ICE3
                 Perception = 30;
                 Intellect = 30;
                 Will = 25;
-                Console.WriteLine("Lets get to work");
+                Console.WriteLine("Lets get to work!");
             }
-            else if (CareerChoice == 2)
+            else if (CareerChoice == 6)
             {
                 Career = "Assassin";
                 Agility = 45;
@@ -113,51 +116,53 @@ namespace ICE3
                 Perception = 35;
                 Intellect = 35;
                 Will = 25;
-                Console.WriteLine("Cold but Calculated");
-                //Calculate Secondary Attributes 
-                Awareness = Agility + Perception;
-                Toughness = Strength + Vigor;
-                Resolve = Intellect + Will;
-                //If no player is selected error will apear
-                if (HasChosenCareer = false) ;
-                Console.Clear();
-                Console.BackgroundColor = ConsoleColor.Black;
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Error, Wrong Imputs for Career");
+                Console.WriteLine("Cold but Calculated!");
+            }
+            else if (CareerChoice == 7) ;
+            Random random = new Random();
+ 
+                {
+                    Console.Clear();
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Error, next time choose a number between 1-7");
+                    {
+                    }
+
+
 
                 
             }
-           
 
 
-            
-            
-
-            /*
-            if (CharacterName == "Hayden")
-            
-                Console.WriteLine("Welcome Hayden");
 
 
-            
-            //Second Test for possible name  
-            else if (CharacterName == "Bob")
-            
-                Console.WriteLine(" Welcome Bob");
-            
-            //Triggers if all other texts fail 
-            else
-            
-                Console.WriteLine("Some Other name was entered");
+
+        /*
+        if (CharacterName == "Hayden")
+
+            Console.WriteLine("Welcome Hayden");
 
 
-           
-              // another way of seeing if staemnets are true using "Or"
-            /*
-             * if((Agility<5 || (Agility >50))
-             * if((agility >= Min) && (Agility <= max))
-             */
 
+        //Second Test for possible name  
+        else if (CharacterName == "Bob")
+
+            Console.WriteLine(" Welcome Bob");
+
+        //Triggers if all other texts fail 
+        else
+
+            Console.WriteLine("Some Other name was entered");
+
+
+
+          // another way of seeing if staemnets are true using "Or"
+        /*
+         * if((Agility<5 || (Agility >50))
+         * if((agility >= Min) && (Agility <= max))
+         */
+    
 
 
         }
