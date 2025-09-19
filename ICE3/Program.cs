@@ -25,6 +25,15 @@
             Console.WriteLine("Please Enter your Name");
             string? CharcterName = Console.ReadLine();
             Character = Console.ReadLine();
+            if (Character == "Hayden")
+            {
+                Console.WriteLine("Welcome Hayden");
+
+
+            }
+            
+
+
 
         }
     }
