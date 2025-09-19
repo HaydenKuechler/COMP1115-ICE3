@@ -10,7 +10,7 @@
             Console.Title = "Character Sheet";
             String Character;
 
-            //Primary attributes 
+            //Primary Attributes 
             int Agility;
             int Strength;
             int Vigor;
