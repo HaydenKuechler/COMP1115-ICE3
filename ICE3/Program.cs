@@ -119,19 +119,27 @@ namespace ICE3
                 Console.WriteLine("Cold but Calculated!");
             }
             else if (CareerChoice == 7) ;
-            Random random = new Random();
- 
+            {
+                Console.WriteLine("Okay so random we go");
+                Random random = new Random();
+                Console.WriteLine(random.Next(1, 8));
+                Console.WriteLine();
+                Console.WriteLine($"Your random number is:{random.Next(7) + 1}");
+            }
+            if (CareerChoice == 8)
+            {
+                Console.WriteLine("You Messed Up!");
+                Console.Clear();
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error, next time choose a number between 1-7");
+            }
                 {
-                    Console.Clear();
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Error, next time choose a number between 1-7");
-                    {
-                    }
-
-
-
                 
+
+
+
+
             }
 
 
